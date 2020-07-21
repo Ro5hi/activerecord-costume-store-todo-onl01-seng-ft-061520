@@ -1,5 +1,5 @@
 # Create your haunted_houses migration here
-class HauntedHouses < ActiveRecord::Migration
+class CreateHauntedHouses < ActiveRecord::Migration[4.2]
   
   def change 
     
@@ -9,10 +9,10 @@ class HauntedHouses < ActiveRecord::Migration
       t.string :location 
       t.string :theme 
       t.string :price
-      t.string :family_friendly
-      t.string :opening_date 
-      t.string :closing_date
-      t.string :long_description 
+      t.boolean :family_friendly
+      t.datetime :opening_date 
+      t.datetime :closing_date
+      t.text :description 
       
       t.timestamps 
       
